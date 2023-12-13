@@ -1,0 +1,10 @@
+# Contributors to the simple_shell project
+
+John Doe <john.doe@example.com>
+- Implemented the main shell loop and command execution logic.
+
+Jane Smith <jane.smith@example.com>
+- Developed parsing functions and environment variable handling.
+
+Alex Johnson <alex.johnson@example.com>
+- Wrote built-in commands and error handling mechanisms.
