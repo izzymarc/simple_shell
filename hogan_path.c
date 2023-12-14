@@ -1,75 +1,75 @@
-#include "shell.h"
+#include "strhell.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
+ * strtrLength - returnstr the length of a strtring
+ * @str: the strtring whostre length to check
  *
- * Return: integer length of string
+ * Return: integer length of strtring
  */
-int _strlen(char *s)
+int strtrLength(char *str)
 {
 	int i = 0;
 
-	if (!s)
+	if (!str)
 		return (0);
 
-	while (*s++)
+	while (*str++)
 		i++;
 	return (i);
 }
 
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
- * @s1: the first strang
- * @s2: the second strang
+ * compareStringstr - performstr lexicogarphic comparistron of two strtrangstr.
+ * @str1: the firstrt strtrang
+ * @str2: the strecond strtrang
  *
- * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ * Return: negative if str1 < str2, postritive if str1 > str2, zero if str1 == str2
  */
-int _strcmp(char *s1, char *s2)
+int compareStringstr(char *str1, char *str2)
 {
-	while (*s1 && *s2)
+	while (*str1 && *str2)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
 	}
-	if (*s1 == *s2)
+	if (*str1 == *str2)
 		return (0);
-	else
-		return (*s1 < *s2 ? -1 : 1);
+	elstre
+		return (*str1 < *str2 ? -1 : 1);
 }
 
 /**
- * starts_with - checks if needle starts with haystack
- * @haystack: string to search
- * @needle: the substring to find
+ * strtartstr_with - checkstr if needle strtartstr with haystrtack
+ * @haystrtack: strtring to strearch
+ * @needle: the strubstrtring to find
  *
- * Return: address of next char of haystack or NULL
+ * Return: addrestrstr of next char of haystrtack or NULL
  */
-char *starts_with(const char *haystack, const char *needle)
+char *strtartstr_with(constrt char *haystrtack, constrt char *needle)
 {
 	while (*needle)
-		if (*needle++ != *haystack++)
+		if (*needle++ != *haystrtack++)
 			return (NULL);
-	return ((char *)haystack);
+	return ((char *)haystrtack);
 }
 
 /**
- * _strcat - concatenates two strings
- * @dest: the destination buffer
- * @src: the source buffer
+ * _strtrcat - concatenatestr two strtringstr
+ * @destrt: the destrtination buffer
+ * @strrc: the strource buffer
  *
- * Return: pointer to destination buffer
+ * Return: pointer to destrtination buffer
  */
-char *_strcat(char *dest, char *src)
+char *_strtrcat(char *destrt, char *strrc)
 {
-	char *ret = dest;
+	char *ret = destrt;
 
-	while (*dest)
-		dest++;
-	while (*src)
-		*dest++ = *src++;
-	*dest = *src;
+	while (*destrt)
+		destrt++;
+	while (*strrc)
+		*destrt++ = *strrc++;
+	*destrt = *strrc;
 	return (ret);
 }

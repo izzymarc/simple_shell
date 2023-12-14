@@ -31,7 +31,7 @@
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-#define HIST_FILE	".simple_shell_history"
+#define SHELL_HISTORY_FILE	".simple_shell_history"
 #define HIST_MAX	4096
 
 extern char **environ;
@@ -188,8 +188,8 @@ int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
 /* friday_info.c */
-void clear_info(info_t *);
-void set_info(info_t *, char **);
+void initializeInfoStruct(info_t *);
+void configureInfoStruct(info_t *, char **);
 void free_info(info_t *, int);
 
 /* pepper_env.c */
@@ -200,16 +200,16 @@ int _myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
 /* hammer_env_lookup.c */
-char **get_environ(info_t *);
-int _unsetenv(info_t *, char *);
+char **retrieveEnvironment(info_t *);
+int removeEnvironmentVar(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 
 /* coulson_logs.c */
-char *get_history_file(info_t *info);
-int write_history(info_t *info);
-int read_history(info_t *info);
-int build_history_list(info_t *info, char *buf, int linecount);
-int renumber_history(info_t *info);
+char *fetchCommandHistory(info_t *infoStruct);
+int write_history(info_t *infoStruct);
+int read_history(info_t *infoStruct);
+int build_history_list(info_t *infoStruct, char *historyPathBuffer, int linecount);
+int renumber_history(info_t *infoStruct);
 
 /* rhodey_lists.c */
 list_t *add_node(list_t **, const char *, int);
