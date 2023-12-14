@@ -1,10 +1,7 @@
-# Contributors to the simple_shell project
+# AUTHORS
 
-John Doe <john.doe@example.com>
-- Implemented the main shell loop and command execution logic.
+This file lists all individuals who have contributed to the Simple Shell Project.
 
-Jane Smith <jane.smith@example.com>
-- Developed parsing functions and environment variable handling.
-
-Alex Johnson <alex.johnson@example.com>
-- Wrote built-in commands and error handling mechanisms.
+## Core Contributors
+- Ezekiel Gwamna - ezekiel.gwamna@aun.edu.ng
+- Ugo Ogadi - ogadi.ugo@gmail.com
