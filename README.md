@@ -57,3 +57,33 @@ This project is part of the ALX Software Engineering program and is intended for
 ## License
 This project is for educational use only.
 
+Here is a list of files for the "0x16. C - Simple Shell" project:
+
+1. `AUTHORS` - The file listing all individuals who have contributed to the project.
+2. `shell.h` - The header file for the Simple Shell.
+3. `main.c` - The main C file containing the code for the Simple Shell.
+4. `coulson_logs.c` - A C file related to logging in the shell.
+5. `friday_info.c` - A C file containing information related to the shell.
+6. `hammer_env_lookup.c` - A C file for environment variable lookup.
+7. `happy_builtins.c` - A C file for handling built-in commands.
+8. `hogan_path.c` - A C file for handling the PATH environment variable.
+9. `jarvis_execute.c` - A C file for executing commands.
+10. `jarvis_shutdown.c` - A C file for shutting down the shell.
+11. `mj_initialize.c` - A C file for shell initialization.
+12. `morgan_memory_adjust.c` - A C file for memory adjustments.
+13. `obadiah_structs.c` - A C file containing data structures.
+14. `pepper_commands.c` - A C file for handling shell commands.
+15. `pepper_env.c` - A C file for environment-related functions.
+16. `potts_variables.c` - A C file for managing variables.
+17. `rhodey_lists.c` - A C file for linked lists.
+18. `rhodey_parse.c` - A C file for parsing.
+19. `stane_faults.c` - A C file for handling faults.
+20. `stark_input_line.c` - A C file for input handling.
+21. `stark_parse_int.c` - A C file for parsing integers.
+22. `stark_prompt.c` - A C file for the shell prompt.
+23. `yinsen_errors.c` - A C file for handling errors.
+24. `.simple_shell_history` - The history file for the shell's command history.
+25. `man_1_simple_shell` - The manual page for the Simple Shell.
+26. `README.md` - The README file containing information about the project.
+
+These files collectively make up the Simple Shell project, containing various components and functionalities of the shell.
