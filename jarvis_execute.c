@@ -24,7 +24,7 @@ int hsh(info_t *info, char **av)
 			set_info(info, av);
 			builtin_ret = find_builtin(info);
 			if (builtin_ret == -1)
-				find_shellCommand(info);
+				find_cmd(info);
 		}
 		else if (interactive(info))
 			_putchar('\n');
@@ -78,12 +78,12 @@ int find_builtin(info_t *info)
 }
 
 /**
- * find_shellCommand - finds a command in PATH
+ * find_cmd - finds a command in PATH
  * @info: the parameter & return info struct
  *
  * Return: void
  */
-void find_shellCommand(info_t *info)
+void find_cmd(info_t *info)
 {
 	char *path = NULL;
 	int i, k;
@@ -104,13 +104,13 @@ void find_shellCommand(info_t *info)
 	if (path)
 	{
 		info->path = path;
-		fork_shellCommand(info);
+		fork_cmd(info);
 	}
 	else
 	{
 		if ((interactive(info) || _getenv(info, "PATH=")
-			|| info->argv[0][0] == '/') && is_shellCommand(info, info->argv[0]))
-			fork_shellCommand(info);
+			|| info->argv[0][0] == '/') && is_cmd(info, info->argv[0]))
+			fork_cmd(info);
 		else if (*(info->arg) != '\n')
 		{
 			info->status = 127;
@@ -120,12 +120,12 @@ void find_shellCommand(info_t *info)
 }
 
 /**
- * fork_shellCommand - forks a an exec thread to run shellCommand
+ * fork_cmd - forks a an exec thread to run cmd
  * @info: the parameter & return info struct
  *
  * Return: void
  */
-void fork_shellCommand(info_t *info)
+void fork_cmd(info_t *info)
 {
 	pid_t child_pid;
 
